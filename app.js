@@ -56,4 +56,9 @@ const cardArray = [
           img: 'images/pizza.png',
       },
 ]
-console.log(cardArray)
+cardArray.sort(() => 0.5 - Math.random())
+const gridDisplay = document.querySelector('#grid') // document.getElementById('grid') //
+console.log(gridDisplay)
+function createBoard () {
+    
+}
