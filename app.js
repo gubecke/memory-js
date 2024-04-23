@@ -2,10 +2,6 @@ const cardArray = [
     {
       name: 'fries',
       img: 'images/fries.png',
-    },
-    {
-        name: 'cheeseburger',
-        img: 'images/cheeseburger.png',
     }, 
     {
         name: 'hotdog',
@@ -32,10 +28,6 @@ const cardArray = [
         img: 'images/fries.png',
       },
       {
-          name: 'cheeseburger',
-          img: 'images/cheeseburger.png',
-      }, 
-      {
           name: 'hotdog',
           img: 'images/hotdog.png',
       },
@@ -60,10 +52,11 @@ cardArray.sort(() => 0.5 - Math.random())
 const gridDisplay = document.querySelector('#grid') // document.getElementById('grid') //
 console.log(gridDisplay)
 function createBoard() {
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < cardArray.length; i++) {
         const card = document.createElement('img')
         card.setAttribute('src', 'images/blank.png')
         card.setAttribute('data-id', i)
+        gridDisplay.appendChild(card)
     }
 }
 createBoard()
