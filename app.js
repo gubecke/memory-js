@@ -67,4 +67,5 @@ function flipCard() {
     cardsChosen.push(cardArray[cardId].name)
     console.log('clicked', cardId)
     console.log(cardsChosen)
+    this.setAttribute('src', cardArray[cardId].img)
 }
