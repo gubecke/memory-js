@@ -60,12 +60,19 @@ function createBoard() {
         gridDisplay.appendChild(card)
     }
 }
+
 createBoard()
+
+function flipCard() {
+    console.log('check for match!')
+}
+
 function flipCard() {
     console.log(cardArray)
     const cardId = this.getAttribute('data-id')
     cardsChosen.push(cardArray[cardId].name)
-    console.log('clicked', cardId)
-    console.log(cardsChosen)
     this.setAttribute('src', cardArray[cardId].img)
+    if (cardsChosen.lenght === 2) {
+        setTimeout(chekMatch, 500)
+    }
 }
